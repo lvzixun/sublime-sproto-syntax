@@ -68,6 +68,10 @@
 			<array>
 				<dict>
 					<key>include</key>
+					<string>#comment</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#internal_type</string>
 				</dict>
 				<dict>
@@ -109,6 +113,10 @@
 			<array>
 				<dict>
 					<key>include</key>
+					<string>#comment</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#field</string>
 				</dict>
 			</array>
@@ -136,6 +144,10 @@
 			<array>
 				<dict>
 					<key>include</key>
+					<string>#comment</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#protocol_session</string>
 				</dict>
 			</array>
@@ -158,7 +170,11 @@
 			<array>
 				<dict>
 					<key>include</key>
-					<string>$self</string>
+					<string>#comment</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#sproto_type</string>
 				</dict>
 				<dict>
 					<key>include</key>

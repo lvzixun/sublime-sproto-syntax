@@ -32,6 +32,7 @@ repository:
       '7': {name: keyword.source.proto}
     end: $\n?
     patterns:
+    - include: '#comment'
     - include: '#internal_type'
     - match: ([A-Za-z][A-Za-z0-9_]*)
       captures:
@@ -43,7 +44,8 @@ repository:
       '1': {name: entity.name.class.sproto}
     end: \}
     patterns:
-    - include: $self
+    - include: '#comment'
+    - include: '#sproto_type'
     - include: '#field'
 
   protocol_session:
@@ -52,6 +54,7 @@ repository:
       '1': {name: keyword.source.sproto}
     end: \}
     patterns:
+    - include: '#comment'
     - include: '#field'
 
 
@@ -62,4 +65,5 @@ repository:
       '3': {name: constant.numeric.sproto}
     end: \}
     patterns:
+    - include: '#comment'
     - include: '#protocol_session'
