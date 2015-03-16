@@ -34,7 +34,12 @@ repository:
     patterns:
     - include: '#comment'
     - include: '#internal_type'
-    - match: ([A-Za-z][A-Za-z0-9_]*)
+    - match: ([A-Za-z][A-Za-z0-9_]*)(\()(\s*)([A-Za-z][A-Za-z0-9_]*)(\s*)(\))
+      captures:
+        '1': {name: entity.name.class.sproto}
+        '4': {name: keyword.source.sproto}
+
+    - match: ([A-Za-z][A-Za-z0-9_]*)(\s*)(\n)
       captures:
         '1': {name: entity.name.class.sproto}
 

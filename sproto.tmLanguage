@@ -82,9 +82,26 @@
 							<key>name</key>
 							<string>entity.name.class.sproto</string>
 						</dict>
+						<key>4</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.source.sproto</string>
+						</dict>
 					</dict>
 					<key>match</key>
-					<string>([A-Za-z][A-Za-z0-9_]*)</string>
+					<string>([A-Za-z][A-Za-z0-9_]*)(\()(\s*)([A-Za-z][A-Za-z0-9_]*)(\s*)(\))</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>entity.name.class.sproto</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>([A-Za-z][A-Za-z0-9_]*)(\s*)(\n)</string>
 				</dict>
 			</array>
 		</dict>
