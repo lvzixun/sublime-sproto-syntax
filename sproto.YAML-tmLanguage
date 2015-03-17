@@ -29,7 +29,6 @@ repository:
     begin: ([A-Za-z][A-Za-z0-9_]*)(\s*)([0-9]+)(\s*)(\:)(\s*)(\*?)
     beginCaptures:
       '3': {name: constant.numeric.sproto}
-      '7': {name: keyword.source.proto}
     end: $\n?
     patterns:
     - include: '#comment'
@@ -37,7 +36,7 @@ repository:
     - match: ([A-Za-z][A-Za-z0-9_]*)(\()(\s*)([A-Za-z][A-Za-z0-9_]*)(\s*)(\))
       captures:
         '1': {name: entity.name.class.sproto}
-        '4': {name: keyword.source.sproto}
+        '4': {name: string.quoted.double.proto}
 
     - match: ([A-Za-z][A-Za-z0-9_]*)(\s*)(\n)
       captures:
@@ -66,7 +65,7 @@ repository:
   sproto_protocol:
     begin: ([A-Za-z][A-Za-z0-9_]*)(\s*)([0-9]+)(\s*)(\{)
     beginCaptures:
-      '1': {name: string.quoted.double.proto}
+      '1': {name: variable.parameter.function.sproto}
       '3': {name: constant.numeric.sproto}
     end: \}
     patterns:

@@ -56,11 +56,6 @@
 					<key>name</key>
 					<string>constant.numeric.sproto</string>
 				</dict>
-				<key>7</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.source.proto</string>
-				</dict>
 			</dict>
 			<key>end</key>
 			<string>$\n?</string>
@@ -85,7 +80,7 @@
 						<key>4</key>
 						<dict>
 							<key>name</key>
-							<string>keyword.source.sproto</string>
+							<string>string.quoted.double.proto</string>
 						</dict>
 					</dict>
 					<key>match</key>
@@ -147,7 +142,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>string.quoted.double.proto</string>
+					<string>variable.parameter.function.sproto</string>
 				</dict>
 				<key>3</key>
 				<dict>
