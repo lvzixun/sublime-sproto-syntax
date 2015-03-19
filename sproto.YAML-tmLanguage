@@ -48,18 +48,32 @@ repository:
       '1': {name: entity.name.class.sproto}
     end: \}
     patterns:
-    - include: '#comment'
-    - include: '#sproto_type'
-    - include: '#field'
+    - include: '#sproto_struct'
 
-  protocol_session:
+
+  sproto_struct:
+    patterns:
+    - include: '#comment'
+    - include: '#field'
+    - include: '#sproto_type'
+
+  protocol_session_struct:
     begin: (response|request)(\s*)(\{)
     beginCaptures:
       '1': {name: keyword.source.sproto}
     end: \}
     patterns:
-    - include: '#comment'
-    - include: '#field'
+    - include: '#sproto_struct'
+
+  protocol_session_typename:
+    begin: (response|request)(\s*)
+    beginCaptures:
+      '1': {name: keyword.source.sproto}
+    end: \n
+    patterns:
+    - match: ([A-Za-z][A-Za-z0-9_]*)
+      captures:
+        '1': {name: entity.name.class.sproto}
 
 
   sproto_protocol:
@@ -70,4 +84,5 @@ repository:
     end: \}
     patterns:
     - include: '#comment'
-    - include: '#protocol_session'
+    - include: '#protocol_session_struct'
+    - include: '#protocol_session_typename'

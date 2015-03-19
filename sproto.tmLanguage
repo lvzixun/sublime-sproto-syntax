@@ -107,7 +107,7 @@
 			<key>name</key>
 			<string>storage.type.sproto</string>
 		</dict>
-		<key>protocol_session</key>
+		<key>protocol_session_struct</key>
 		<dict>
 			<key>begin</key>
 			<string>(response|request)(\s*)(\{)</string>
@@ -125,11 +125,37 @@
 			<array>
 				<dict>
 					<key>include</key>
-					<string>#comment</string>
+					<string>#sproto_struct</string>
 				</dict>
+			</array>
+		</dict>
+		<key>protocol_session_typename</key>
+		<dict>
+			<key>begin</key>
+			<string>(response|request)(\s*)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
 				<dict>
-					<key>include</key>
-					<string>#field</string>
+					<key>name</key>
+					<string>keyword.source.sproto</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\n</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>entity.name.class.sproto</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>([A-Za-z][A-Za-z0-9_]*)</string>
 				</dict>
 			</array>
 		</dict>
@@ -160,7 +186,29 @@
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>#protocol_session</string>
+					<string>#protocol_session_struct</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#protocol_session_typename</string>
+				</dict>
+			</array>
+		</dict>
+		<key>sproto_struct</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#comment</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#field</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#sproto_type</string>
 				</dict>
 			</array>
 		</dict>
@@ -182,15 +230,7 @@
 			<array>
 				<dict>
 					<key>include</key>
-					<string>#comment</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#sproto_type</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#field</string>
+					<string>#sproto_struct</string>
 				</dict>
 			</array>
 		</dict>
