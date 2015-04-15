@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+.${1:SprotoTypeName} {
+  ${2:# fields}
+}
+]]></content>
+  <tabTrigger>type</tabTrigger>
+  <scope>source.sproto</scope>
+</snippet>

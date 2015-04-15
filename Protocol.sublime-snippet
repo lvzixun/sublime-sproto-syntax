@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+${1:ProtocolName} ${2:42} {
+  request ${3: RequestName}
+  response ${4: ResponseName}
+}
+]]></content>
+  <tabTrigger>protocol</tabTrigger>
+  <scope>source.sproto</scope>
+</snippet>

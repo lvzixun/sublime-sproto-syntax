@@ -1,0 +1,10 @@
+# [PackageDev] target_format: plist, ext: tmPreferences
+
+name: Comments
+scope: source.sproto
+uuid: 3cab9ed8-9205-4f22-b1fb-cc20617037e8
+
+settings:
+  shellVariables:
+    - name: TM_COMMENT_START
+      value: '# ' 
