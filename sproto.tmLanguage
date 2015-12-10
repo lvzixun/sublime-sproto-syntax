@@ -116,7 +116,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.source.sproto</string>
+					<string>constant.language.sproto</string>
 				</dict>
 			</dict>
 			<key>end</key>
@@ -138,7 +138,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.source.sproto</string>
+					<string>constant.language.sproto</string>
 				</dict>
 			</dict>
 			<key>end</key>
@@ -172,7 +172,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>variable.parameter.function.sproto</string>
+					<string>entity.name.function.sproto</string>
 				</dict>
 				<key>3</key>
 				<dict>
@@ -225,7 +225,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.type.sproto</string>
+					<string>entity.name.class.sproto</string>
 				</dict>
 			</dict>
 			<key>end</key>
